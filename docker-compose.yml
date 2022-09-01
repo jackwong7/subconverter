@@ -1,0 +1,10 @@
+version: '3.7'
+services:
+  sub:
+    build: .
+    container_name: sub
+    restart: always
+    environment:
+      - TZ=Asia/Shanghai
+    ports:
+      - 7700:25500
