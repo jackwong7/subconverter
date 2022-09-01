@@ -17,8 +17,8 @@ COPY --from=build /app/sub-web/dist /usr/share/nginx/html
 ADD . /var/dev/
 WORKDIR /var/dev/
 RUN chmod 777 ./docker-entrypoint.sh \
-    && wget https://github.com/tindy2013/subconverter/releases/download/v0.6.4/subconverter_linux64.tar.gz \
-    && tar -zxvf subconverter_linux64.tar.gz && rm subconverter_linux64.tar.gz
+    && wget https://github.com/tindy2013/subconverter/releases/download/v0.7.2/subconverter_aarch64.tar.gz \
+    && tar -zxvf subconverter_aarch64.tar.gz && rm subconverter_aarch64.tar.gz
 
 
 EXPOSE 80
