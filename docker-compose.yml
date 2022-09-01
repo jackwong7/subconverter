@@ -1,10 +1,11 @@
 version: '3.7'
 services:
   sub:
-    build: .
+    iamge: joy88000/subconverter
     container_name: sub
     restart: always
     environment:
       - TZ=Asia/Shanghai
     ports:
-      - 7700:25500
+      - 7700:80
+      - 7701:25500
