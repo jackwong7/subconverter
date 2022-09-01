@@ -1,7 +1,7 @@
 version: '3.7'
 services:
   sub:
-    iamge: joy88000/subconverter
+    image: joy88000/subconverter
     container_name: sub
     restart: always
     environment:
