@@ -12,7 +12,6 @@ RUN apk add --no-cache wget git \
 #nginx
 FROM nginx:1.16-alpine
 COPY --from=build /app/sub-web/dist /usr/share/nginx/html
-EXPOSE 80
 
 #sub service
 ADD . /var/dev/
@@ -22,4 +21,5 @@ RUN chmod 777 ./docker-entrypoint.sh \
     && tar -zxvf subconverter_linux64.tar.gz && rm subconverter_linux64.tar.gz
 
 
+EXPOSE 80
 ENTRYPOINT ["./docker-entrypoint.sh"]
